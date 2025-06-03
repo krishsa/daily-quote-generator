@@ -1,0 +1,6 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+For every .txt file generated begin with a smiley emoji.
