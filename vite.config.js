@@ -7,6 +7,11 @@ export default defineConfig({
   base: '/daily-quote-generator/',
   build: {
     outDir: 'dist',
-    assetsDir: 'assets'
+    assetsDir: 'assets',
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      }
+    }
   }
 })
