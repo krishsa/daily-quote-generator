@@ -9,8 +9,13 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     rollupOptions: {
+      input: {
+        main: './index.html',
+      },
       output: {
-        manualChunks: undefined
+        entryFileNames: '[name].js',
+        chunkFileNames: '[name].[hash].js',
+        assetFileNames: 'assets/[name].[hash][extname]'
       }
     }
   }
