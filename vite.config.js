@@ -16,6 +16,14 @@ export default defineConfig({
       }
     }
   },
+  optimizeDeps: {
+    include: ['react', 'react-dom']
+  },
+  esbuild: {
+    loader: 'jsx',
+    include: /src\/.*\.jsx?$/,
+    exclude: []
+  },
   resolve: {
     alias: {
       '@': '/src'
