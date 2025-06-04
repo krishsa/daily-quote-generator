@@ -19,7 +19,8 @@ export default defineConfig({
           'react-dom': 'ReactDOM'
         }
       }
-    }
+    },
+    cssCodeSplit: false
   },
   optimizeDeps: {
     include: ['react', 'react-dom']

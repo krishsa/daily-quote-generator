@@ -7,6 +7,136 @@
     <title>Daily Quote Generator</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <style>
+      :root {
+        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+        font-weight: 400;
+        color-scheme: light dark;
+        color: #213547;
+        background-color: #f9f9f9;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        --primary-color: #646cff;
+        --background-color: rgba(255, 255, 255, 0.1);
+        --text-color: #ffffff;
+        --shadow-color: rgba(0, 0, 0, 0.15);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-width: 320px;
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        transition: background-image 0.5s ease-in-out;
+      }
+
+      #root {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .quote-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        margin: -2rem;
+        padding: 2rem;
+      }
+
+      .quote-box {
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 2.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        max-width: 600px;
+        width: 90%;
+        transition: transform 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .quote-box:hover {
+        transform: translateY(-5px);
+      }
+
+      .quote-text {
+        font-size: 1.8rem;
+        line-height: 1.6;
+        color: var(--text-color);
+        margin-bottom: 1.5rem;
+        font-style: italic;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .quote-author {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 2rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      }
+
+      .new-quote-btn {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 0.8rem 2rem;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .new-quote-btn:hover {
+        background-color: #535bf2;
+        transform: translateY(-2px);
+      }
+
+      .loading {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin: 2rem 0;
+      }
+
+      .error {
+        color: #ff4d4d;
+        font-size: 1.2rem;
+        margin: 2rem 0;
+        padding: 1rem;
+        border: 1px solid rgba(255, 77, 77, 0.5);
+        border-radius: 8px;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      button {
+        border-radius: 8px;
+        border: 1px solid transparent;
+        padding: 0.6em 1.2em;
+        font-size: 1em;
+        font-weight: 500;
+        font-family: inherit;
+        cursor: pointer;
+        transition: border-color 0.25s;
+      }
+
+      button:focus,
+      button:focus-visible {
+        outline: 4px auto -webkit-focus-ring-color;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>

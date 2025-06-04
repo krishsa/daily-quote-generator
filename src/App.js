@@ -1,5 +1,3 @@
-import './App.css'
-
 // Collection of beautiful landscape backgrounds
 const backgrounds = [
   'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80', // Foggy Forest
